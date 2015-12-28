@@ -1,0 +1,53 @@
+#slider {
+	max-width: 720px; max-height: 405px;
+	width:720px; height: 405px;
+	margin: 100px auto 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+#slider img {
+	max-width: 720px; max-height: 405px;
+	width: 720px; height: 405px;
+}
+
+.pic {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+.slider-btn {
+	width: 100px; height: 405px;
+}
+
+.prev {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.prev span { float: left; }
+
+.prev:hover, .next:hover {
+	background-color: rgba(219, 219, 219, 0.5); 
+}
+
+.next {
+	position: absolute;
+	top: 0;
+    right: 0;	
+}
+
+.next span { float: right; }
+
+.icon {
+	color: #fff;
+	width: 100px; height: 405px;
+	font-size: 25px;
+	text-align: center;
+	line-height: 405px;
+	background-color: rgba(219, 219, 219, 0.1); 
+}
