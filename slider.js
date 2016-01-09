@@ -1,7 +1,33 @@
+function fadeOut(element) {
+	var op = 1;
+	var timerFO = setInterval( function() {
+		if( op <= 0) {
+			window.clearInterval(timerFO);
+			element.style.display = 'none';
+		}
+		op -= 0.1;
+		element.style.opacity = op;
+		element.style.filter = 'alpha(opacity=' + op * 100 + ')';
+	}, 50);
+}
+
+function fadeIn(element) {
+	element.style.display = 'block';
+	var op = 0;
+	var timerFI = setInterval( function() {
+		if (op >= 1) {
+			window.clearInterval(timerFI);
+		}
+		op += 0.1;
+		element.style.opacity = op;
+		element.style.filter = 'alpha(opacity=' + op * 100 + ')';
+	}, 50);
+}
+
 var currentPos = 0;
 var slide = function(input) {
 	var currentPic = document.getElementById('slider').children[currentPos];
-	currentPic.className = 'pic';
+	fadeOut(currentPic);
 	currentPos += input;
     if(currentPos > 3) {
     	currentPos = 0;
@@ -10,7 +36,7 @@ var slide = function(input) {
     	currentPos = 3;
     }
 	var nextPic = document.getElementById('slider').children[currentPos];
-	nextPic.className += 'active';  
+	fadeIn(nextPic);
 }
 
 function slideNext() {

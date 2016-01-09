@@ -9,14 +9,13 @@
 #slider img {
 	max-width: 720px; max-height: 405px;
 	width: 720px; height: 405px;
-}
-
-.pic {
 	display: none;
+	opacity: 0;
 }
 
-.active {
+#slider .active {
 	display: block;
+	opacity: 1;
 }
 
 .slider-btn {
